@@ -11,7 +11,7 @@ module.exports = {
         },
         light: {
           background: "#F0FFFF",
-          boxColor: "#C2C2C2",
+          boxColor: "#D5EBEB",
           text: "#202020",
         },
         green: "#1ED760",

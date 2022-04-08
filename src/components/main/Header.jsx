@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
-import { FaRegMoon, FaMoon } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
+import Logo from "../../assets/logo.svg";
 
 const Header = () => {
-  const [pressed, setPressed] = useState(false);
-
-  const theme = localStorage.getItem("theme");
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.getElementById("toggleA").addEventListener("click", function () {
@@ -21,6 +22,7 @@ const Header = () => {
     });
     if (
       localStorage.theme === "dark" ||
+      // eslint-disable-next-line no-negated-in-lhs
       (!"theme" in localStorage &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
@@ -29,12 +31,35 @@ const Header = () => {
       document.querySelector("html").classList.add("dark");
     }
   });
+
   return (
     <div className="flex justify-between px-64 py-4">
-      <h1>Header</h1>
-      <button id="toggleA" className="text-light-text dark:text-dark-text">
-        <FaMoon size={24} />
-      </button>
+      <a href="/">
+        <img src={Logo} className="w-48" />
+      </a>
+      <div className="flex gap-8 text-light-text dark:text-dark-text items-center">
+        <a href="#" className="font-Montserrat font-bold text-sm">
+          about
+        </a>
+        <a href="#" className="font-Montserrat font-bold text-sm">
+          solutions
+        </a>
+        <a href="#" className="font-Montserrat font-bold text-sm">
+          how it works
+        </a>
+        <a href="#" className="font-Montserrat font-bold text-sm">
+          help
+        </a>
+        <button
+          className="font-Montserrat font-bold text-sm pl-16"
+          onClick={() => navigate("/login")}
+        >
+          login
+        </button>
+        <button id="toggleA" className="text-light-text dark:text-dark-text">
+          <FaMoon size={24} />
+        </button>
+      </div>
     </div>
   );
 };

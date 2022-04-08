@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 html,body {
-    @apply antialiased h-screen bg-light-background dark:bg-dark-background transform transition duration-300
+    @apply antialiased h-full bg-light-background dark:bg-dark-background transform transition duration-300
 }
 
 .shadow{
