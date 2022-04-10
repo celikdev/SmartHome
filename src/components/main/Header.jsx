@@ -38,18 +38,18 @@ const Header = () => {
         <img src={Logo} className="w-48" />
       </a>
       <div className="flex gap-8 text-light-text dark:text-dark-text items-center">
-        <a href="#" className="font-Montserrat font-bold text-sm">
+        <Link to="/about" className="font-Montserrat font-bold text-sm">
           about
-        </a>
+        </Link>
         <Link to="/solutions" className="font-Montserrat font-bold text-sm">
           solutions
         </Link>
-        <a href="#" className="font-Montserrat font-bold text-sm">
+        <Link to="/how-it-works" className="font-Montserrat font-bold text-sm">
           how it works
-        </a>
-        <a href="#" className="font-Montserrat font-bold text-sm">
+        </Link>
+        <Link to="/help" className="font-Montserrat font-bold text-sm">
           help
-        </a>
+        </Link>
         <button
           className="font-Montserrat font-bold text-sm pl-16"
           onClick={() => navigate("/login")}
