@@ -1,9 +1,4 @@
-import {
-  Home,
-  Login,
-  WiredTechnologies,
-  WirellesTechnologies,
-} from "./screens";
+import { Dashboard, Home, Login, Solutions } from "./screens";
 
 export const route = [
   {
@@ -15,11 +10,11 @@ export const route = [
     element: <Login />,
   },
   {
-    path: "/wired-technologies",
-    element: <WiredTechnologies />,
+    path: "/dashboard",
+    element: <Dashboard />,
   },
   {
-    path: "/wirelles-technologies",
-    element: <WirellesTechnologies />,
+    path: "/solutions",
+    element: <Solutions />,
   },
 ];

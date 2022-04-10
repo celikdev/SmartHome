@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { FaMoon } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import Logo from "../../assets/logo.svg";
 
@@ -41,9 +41,9 @@ const Header = () => {
         <a href="#" className="font-Montserrat font-bold text-sm">
           about
         </a>
-        <a href="#" className="font-Montserrat font-bold text-sm">
+        <Link to="/solutions" className="font-Montserrat font-bold text-sm">
           solutions
-        </a>
+        </Link>
         <a href="#" className="font-Montserrat font-bold text-sm">
           how it works
         </a>
