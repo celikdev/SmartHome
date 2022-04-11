@@ -19,7 +19,7 @@ const TitleBox = () => {
         onClick={() =>
           cookies.userToken ? navigate("/dashboard") : navigate("/login")
         }
-        className="w-64 bg-green border-4 border-transparent font-Montserrat font-bold py-2 text-sm rounded-lg transition-colors duration-300 hover:bg-light-background hover:border-green"
+        className="w-64 bg-green font-Montserrat font-bold py-3 text-sm rounded-lg transition duration-300 hover:brightness-90"
       >
         Go Your Dashboard
       </button>

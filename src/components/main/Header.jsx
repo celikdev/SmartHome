@@ -38,6 +38,9 @@ const Header = () => {
         <img src={Logo} className="w-48" />
       </a>
       <div className="flex gap-8 text-light-text dark:text-dark-text items-center">
+        <Link to="/" className="font-Montserrat font-bold text-sm">
+          home
+        </Link>
         <Link to="/about" className="font-Montserrat font-bold text-sm">
           about
         </Link>
